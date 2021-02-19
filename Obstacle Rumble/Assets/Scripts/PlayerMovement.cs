@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,13 +10,25 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float movementSpeed, turnSmoothTime;
 
+    [SerializeField] private float gravity, jumpHeight;
+
+    [SerializeField] private Transform groundCheck;
+
+    [SerializeField] private LayerMask layerMask;
+
+    private bool isRunning;
+    
     private float turnSmooth;
-
-
 
     private Vector2 moveDir;
 
     private Transform camTransform;
+
+    public bool isGrounded;
+
+    private bool isJumping = false;
+
+    private Vector3 velocity;
 
     private void Start()
     {
@@ -24,17 +37,53 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.position, 0.05f, layerMask);
+        
         var inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveDir = inputDir.normalized;
 
-        Move();
+        isRunning = moveDir.magnitude > 0;
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            StartCoroutine(Jump());
+        }
+        
         Animate(inputDir.y, inputDir.x);
         Rotate();
+        Fall();
+        Move();
     }
 
     void Move()
     {
         player.Move(transform.forward * movementSpeed * moveDir.magnitude * Time.deltaTime);
+        player.Move(velocity * Time.deltaTime);
+    }
+
+    
+    IEnumerator Jump()
+    {
+        if (isGrounded && isRunning && !isJumping)
+        {
+            anim.Play("Running Jump");
+              
+            velocity.y = Mathf.Sqrt(2 * gravity * jumpHeight) * Time.deltaTime;
+            isJumping = true;
+        }
+
+        yield return new WaitForSeconds(1f);
+        isJumping = false;
+    }
+    
+
+    void Fall()
+    {
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -1f;
+        }
+        else  velocity.y += -gravity * Time.deltaTime;
     }
 
     void Animate(float vertical, float horizontal)
