@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isGrounded;
 
-    private bool isJumping = false;
+    public bool isJumping = false;
 
     private Vector3 velocity;
 
@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded && isRunning && !isJumping)
         {
-            anim.Play("Running Jump");
+            anim.Play("Jump");
               
             velocity.y = Mathf.Sqrt(2 * gravity * jumpHeight) * Time.deltaTime;
             isJumping = true;
