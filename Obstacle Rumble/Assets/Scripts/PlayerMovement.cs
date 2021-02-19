@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isJumping = false;
 
-    private Vector3 velocity;
+    public Vector3 velocity;
 
     private void Start()
     {
@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        velocity.y = Mathf.Clamp(velocity.y, -200, 3);
+        
         isGrounded = Physics.CheckSphere(groundCheck.position, 0.05f, layerMask);
         
         var inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
