@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
 
     [SerializeField] private LayerMask layerMask;
+    
 
     private bool isRunning;
     
@@ -54,7 +55,12 @@ public class PlayerMovement : MonoBehaviour
         Animate(inputDir.y, inputDir.x);
         Rotate();
         Fall();
-        Move();
+
+        if (!anim.GetBool("isKicking"))
+        {
+            Move();
+        }
+        
     }
 
     void Move()
@@ -84,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -1f;
+            anim.SetBool("isFalling", false);
         }
         else  velocity.y += -gravity * Time.deltaTime;
     }
@@ -99,6 +106,11 @@ public class PlayerMovement : MonoBehaviour
             anim.SetFloat("Speed", 1f, 0.05f, Time.deltaTime);
         }
         else anim.SetFloat("Speed", 0f, 0.05f, Time.deltaTime);
+
+        if (velocity.y < -3 && !isGrounded)
+        {
+            anim.SetBool("isFalling", true);
+        }
     }
 
     void Rotate()
