@@ -25,11 +25,13 @@ public class PlayerMovement : MonoBehaviour
 
     private Transform camTransform;
 
-    public bool isGrounded;
+    private bool isGrounded;
 
-    public bool isJumping = false;
+    private bool isJumping = false;
 
-    public Vector3 velocity;
+    private Vector3 velocity;
+
+    private float horizontal, vertical;
 
     private void Start()
     {
@@ -41,25 +43,43 @@ public class PlayerMovement : MonoBehaviour
         velocity.y = Mathf.Clamp(velocity.y, -200, 3);
         
         isGrounded = Physics.CheckSphere(groundCheck.position, 0.05f, layerMask);
+
         
-        var inputDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        
+        
+        var inputDir = new Vector2(horizontal, vertical);
         moveDir = inputDir.normalized;
 
         isRunning = moveDir.magnitude > 0;
 
-        if (Input.GetButtonDown("Jump"))
+       
+        
+
+        if (!anim.GetBool("isKicking") && !anim.GetBool("isPunching2") && !anim.GetBool("isPunching1"))
         {
-            StartCoroutine(Jump());
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
+            
+            
+            if (Input.GetButtonDown("Jump"))
+            {
+                StartCoroutine(Jump());
+            }
         }
+        else
+        {
+            horizontal = 0;
+            vertical = 0;
+        }
+        
+        
+        
         
         Animate(inputDir.y, inputDir.x);
         Rotate();
         Fall();
-
-        if (!anim.GetBool("isKicking"))
-        {
-            Move();
-        }
+        Roll();
+        Move();
         
     }
 
@@ -72,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
     
     IEnumerator Jump()
     {
-        if (isGrounded && isRunning && !isJumping)
+        if (isGrounded && isRunning && !isJumping )
         {
             anim.Play("Jump");
               
@@ -124,7 +144,28 @@ public class PlayerMovement : MonoBehaviour
                                     Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, 
                                         ref turnSmooth,turnSmoothTime);
         }
+    }
+
+    void Roll()
+    {
+        if (isRunning && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(RollAnim());
+        }
+    }
+    
+    
+    IEnumerator RollAnim()
+    {
+        anim.SetBool("isRolling", true);
+        player.height /= 2;
+        player.center /= 2; 
+
+        yield return new WaitForSeconds(1f);
         
+        anim.SetBool("isRolling", false);
+        player.height *= 2;
+        player.center *= 2; 
     }
 
 

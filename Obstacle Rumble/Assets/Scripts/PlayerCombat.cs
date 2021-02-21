@@ -14,10 +14,17 @@ public class PlayerCombat : MonoBehaviour
         {
           // anim.SetTrigger("Kick");
           StartCoroutine(Kick());
+        }
 
+        if (Input.GetButtonDown("Fire2"))
+        {
+            StartCoroutine(UpperCut());
         }
         
-        Debug.Log(anim.GetBool("isKicking"));
+        if (Input.GetButtonDown("Fire1"))
+        {
+            StartCoroutine(Bash());
+        }
 
         
         
@@ -31,6 +38,27 @@ public class PlayerCombat : MonoBehaviour
         else return false;
     }
 
+    
+    IEnumerator UpperCut()
+    {
+        anim.SetBool("isPunching2", true);
+
+        yield return new WaitForSeconds(2f);
+        
+        anim.SetBool("isPunching2", false);
+    }
+    
+    
+    IEnumerator Bash()
+    {
+        anim.SetBool("isPunching1", true);
+
+        yield return new WaitForSeconds(1.4f);
+        
+        anim.SetBool("isPunching1", false);
+    }
+    
+    
     IEnumerator Kick()
     {
         anim.SetBool("isKicking", true);
