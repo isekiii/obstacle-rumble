@@ -46,7 +46,6 @@ public class PlayerMovement : MonoBehaviour
 
         
         
-        
         var inputDir = new Vector2(horizontal, vertical);
         moveDir = inputDir.normalized;
 

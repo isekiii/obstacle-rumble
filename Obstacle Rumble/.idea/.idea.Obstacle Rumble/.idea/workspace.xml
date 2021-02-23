@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e488c6d-2d0d-4181-96ca-aa389102c01e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCombat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerCombat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +19,10 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/CamMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleRotation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CamMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oYZsJVtomjNkOa4DXQncVVU93t" />
@@ -77,6 +75,7 @@
       <workItem from="1613803696506" duration="4798000" />
       <workItem from="1613899813419" duration="799000" />
       <workItem from="1613913439178" duration="2142000" />
+      <workItem from="1614062567522" duration="2008000" />
     </task>
     <servers />
   </component>
