@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e488c6d-2d0d-4181-96ca-aa389102c01e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +16,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyMovementAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CamMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerCombat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyAnim.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -23,6 +27,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCombat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CamMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovementAI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAnim.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/EndTrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/RigidBodyHit.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oYZsJVtomjNkOa4DXQncVVU93t" />
@@ -76,6 +84,8 @@
       <workItem from="1613899813419" duration="799000" />
       <workItem from="1613913439178" duration="2142000" />
       <workItem from="1614062567522" duration="2008000" />
+      <workItem from="1614365449443" duration="5000" />
+      <workItem from="1614411603617" duration="5194000" />
     </task>
     <servers />
   </component>
