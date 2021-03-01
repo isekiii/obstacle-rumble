@@ -912,8 +912,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3687696038334849548}
   - component: {fileID: 3794262342536780907}
-  - component: {fileID: 3794262342536780909}
-  - component: {fileID: 3794262342536780911}
   - component: {fileID: -4749026525863070263}
   m_Layer: 8
   m_Name: Enemy
@@ -959,41 +957,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3794262342536780909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4064081599528974518}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a99e379fc2e6e4dbb375600161d272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  anim: {fileID: 3794262342536780907}
-  movementSpeed: 5
-  turnSmoothTime: 0.12
-  gravity: 10
-  jumpHeight: 30000
-  groundCheck: {fileID: 3794262341525850177}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 1
---- !u!114 &3794262342536780911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4064081599528974518}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c429c953d38ad469351d5435ac65ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 3794262342536780907}
 --- !u!195 &-4749026525863070263
 NavMeshAgent:
   m_ObjectHideFlags: 0

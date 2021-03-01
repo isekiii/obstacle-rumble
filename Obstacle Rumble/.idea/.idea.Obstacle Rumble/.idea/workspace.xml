@@ -4,8 +4,9 @@
     <list default="true" id="0e488c6d-2d0d-4181-96ca-aa389102c01e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Obstacle Rumble/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PathWay.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PathWay.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +32,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RigidBodyHit.cs" />
+      <option value="$PROJECT_DIR$/Assets/GateSpawn.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oYZsJVtomjNkOa4DXQncVVU93t" />
@@ -86,6 +88,8 @@
       <workItem from="1614062567522" duration="2008000" />
       <workItem from="1614365449443" duration="5000" />
       <workItem from="1614411603617" duration="5194000" />
+      <workItem from="1614524552317" duration="610000" />
+      <workItem from="1614585448220" duration="1203000" />
     </task>
     <servers />
   </component>
