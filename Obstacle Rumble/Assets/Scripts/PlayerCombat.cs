@@ -12,7 +12,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-          // anim.SetTrigger("Kick");
+
           StartCoroutine(Kick());
         }
 
@@ -25,20 +25,9 @@ public class PlayerCombat : MonoBehaviour
         {
             StartCoroutine(Bash());
         }
-
-        
-        
+  
     }
 
-    bool isPlaying(string stateName)
-    {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName(stateName) &&
-            anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
-            return true;
-        else return false;
-    }
-
-    
     IEnumerator UpperCut()
     {
         anim.SetBool("isPunching2", true);
