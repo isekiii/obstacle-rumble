@@ -7,9 +7,26 @@ public class EnemyAnim : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator anim;
+    [SerializeField] private float minSpeed, maxSpeed, acceleration;
+
+    private bool isRunning;
+    
     void Update()
     {
         RunAnimation();
+        isRunning = anim.GetFloat("Speed") > 0;
+        agent.speed = Mathf.Clamp(agent.speed, minSpeed, maxSpeed);
+        Accelerate();
+
+    }
+
+
+    void Accelerate()
+    {
+        if (isRunning)
+        {
+            agent.speed += acceleration * Time.deltaTime;
+        }
     }
 
 
