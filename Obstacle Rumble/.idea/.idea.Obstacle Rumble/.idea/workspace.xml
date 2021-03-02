@@ -20,13 +20,13 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/ObstacleRotation.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCombat.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CamMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovementAI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EnemyAnim.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EndTrigger.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RigidBodyHit.cs" />
       <option value="$PROJECT_DIR$/Assets/GateSpawn.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oYZsJVtomjNkOa4DXQncVVU93t" />
@@ -86,6 +86,8 @@
       <workItem from="1614585448220" duration="1203000" />
       <workItem from="1614589710148" duration="218000" />
       <workItem from="1614590501970" duration="10000" />
+      <workItem from="1614633969841" duration="595000" />
+      <workItem from="1614667692392" duration="2817000" />
     </task>
     <servers />
   </component>
