@@ -6907,7 +6907,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7980706174939432215, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980706174939432215, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
+      propertyPath: minSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980706174939432215, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980706174939432215, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
+      propertyPath: acceleration
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

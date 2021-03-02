@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask;
     
+    [SerializeField] private float acceleration,minSpeed,maxSpeed;
 
     private bool isRunning;
     
@@ -48,11 +49,15 @@ public class PlayerMovement : MonoBehaviour
         
         var inputDir = new Vector2(horizontal, vertical);
         moveDir = inputDir.normalized;
-
+       //------------------------------------------------------------
+        if (isRunning)
+        {
+            movementSpeed += acceleration * Time.deltaTime;
+        }
+        else movementSpeed = minSpeed;
+        movementSpeed = Mathf.Clamp(movementSpeed, minSpeed, maxSpeed);
+        //------------------------------------------------------------------
         isRunning = moveDir.magnitude > 0;
-
-       
-        
 
         if (!anim.GetBool("isKicking") && !anim.GetBool("isPunching2") && !anim.GetBool("isPunching1"))
         {
