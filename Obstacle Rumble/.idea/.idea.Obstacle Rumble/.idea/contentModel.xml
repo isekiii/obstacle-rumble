@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Obstacle Rumble.-1041285257.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Admin\Documents\Projects\obstacle-rumble\Obstacle Rumble" t="IncludeRecursive">
+    <e p="C:\Users\Waflis\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Waflis\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Obstacle Rumble.-1680032145.00" t="ExcludeRecursive" />
+    <e p="D:\obstacle-rumble\Obstacle Rumble" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="MenuAnim.cs" t="Include" />
         <e p="PBR Ground Materials #1 [Dirt&amp; Grass]" t="Include">
           <e p="Documentation.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="CamMovement.cs" t="Include" />
+          <e p="CylinderRotation.cs" t="Include" />
           <e p="EndTrigger.cs" t="Include" />
           <e p="EnemyAnim.cs" t="Include" />
           <e p="EnemyMovementAI.cs" t="Include" />
           <e p="GateSpawn.cs" t="Include" />
           <e p="hitParticle.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
+          <e p="MenuAnim.cs" t="Include" />
           <e p="ObstacleRotation.cs" t="Include" />
           <e p="PlayerCombat.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
