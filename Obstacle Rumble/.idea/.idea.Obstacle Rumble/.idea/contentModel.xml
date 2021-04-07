@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Waflis\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Waflis\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Obstacle Rumble.-1680032145.00" t="ExcludeRecursive" />
-    <e p="D:\obstacle-rumble\Obstacle Rumble" t="IncludeRecursive">
+    <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Admin\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Obstacle Rumble.-1041285257.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Admin\Documents\Projects\obstacle-rumble\Obstacle Rumble" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="PBR Ground Materials #1 [Dirt&amp; Grass]" t="Include">
@@ -24,6 +24,7 @@
           <e p="PlayerMovement.cs" t="Include" />
           <e p="TileScript.cs" t="Include" />
         </e>
+        <e p="SphereParticle.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
