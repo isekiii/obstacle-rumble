@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
 
     [SerializeField] private LayerMask layerMask;
-    [SerializeField] private AudioSource jumpAudio,  fallAudio;
     
 
     private bool isRunning;
@@ -91,8 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && isRunning && !isJumping )
         {
             anim.Play("Jump");
-            jumpAudio.Play();
-              
+            SoundScript.PlaySound("jump");
             velocity.y = Mathf.Sqrt(2 * gravity * jumpHeight) * Time.deltaTime;
             isJumping = true;
         }
@@ -108,7 +106,6 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -1f;
             anim.SetBool("isFalling", false);
-            
         }
         else  velocity.y += -gravity * Time.deltaTime;
     }
@@ -128,7 +125,6 @@ public class PlayerMovement : MonoBehaviour
         if (velocity.y < -3 && !isGrounded)
         {
             anim.SetBool("isFalling", true);
-            
         }
     }
 
