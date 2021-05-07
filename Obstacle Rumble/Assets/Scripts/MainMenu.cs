@@ -6,14 +6,21 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
 
-
+    [SerializeField] private AudioSource click, highlight;
     public void StartGame()
     {
+        click.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Options()
+    {
+        click.Play();
     }
 
     public void ExitGame()
     {
+        click.Play();
         Application.Quit();
         Debug.Log("Game closed");
     }

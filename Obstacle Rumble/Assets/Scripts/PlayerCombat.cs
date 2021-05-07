@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     [SerializeField] private Animator anim;
+    [SerializeField] private AudioSource punchAudio,  kickAudio;
     
     
     void Update()
@@ -31,8 +32,11 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator UpperCut()
     {
         anim.SetBool("isPunching2", true);
+        
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        punchAudio.Play();
+        yield return new WaitForSeconds(1f);
         
         anim.SetBool("isPunching2", false);
     }
@@ -41,8 +45,11 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator Bash()
     {
         anim.SetBool("isPunching1", true);
+        
 
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(0.7f);
+        punchAudio.Play();
+        yield return new WaitForSeconds(0.7f);
         
         anim.SetBool("isPunching1", false);
     }
@@ -51,8 +58,11 @@ public class PlayerCombat : MonoBehaviour
     IEnumerator Kick()
     {
         anim.SetBool("isKicking", true);
+        
 
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(0.7f);
+        kickAudio.Play();
+        yield return new WaitForSeconds(0.7f);
         
         anim.SetBool("isKicking", false);
     }
