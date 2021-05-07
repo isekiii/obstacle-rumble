@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && isRunning && !isJumping )
         {
             anim.Play("Jump");
-              
+            SoundScript.PlaySound("jump");
             velocity.y = Mathf.Sqrt(2 * gravity * jumpHeight) * Time.deltaTime;
             isJumping = true;
         }
