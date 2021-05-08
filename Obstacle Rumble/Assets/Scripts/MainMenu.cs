@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private AudioSource click, highlight;
     public void StartGame()
     {
+        PlayerPrefs.SetInt("enemyCount", 0);
+        PlayerPrefs.SetInt("playerCount", 0);
         click.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

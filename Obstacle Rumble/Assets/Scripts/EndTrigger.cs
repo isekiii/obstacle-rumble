@@ -10,31 +10,27 @@ public class EndTrigger : MonoBehaviour
 {
     [SerializeField] private TMP_Text endText;
     [SerializeField] private AudioSource audio;
-    [SerializeField] private GameObject player, enemy, playerSpawn, enemySpawn;
     [SerializeField] private GameObject health0, health30, health70, health100;
-    [SerializeField] private GameObject Ehealth0, Ehealth30, Ehealth70, Ehealth100;
+    [SerializeField] private GameObject eHealth0, eHealth30, eHealth70, eHealth100;
     private int playerCount =0;
     private int enemyCount =0;
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            playerCount++;
-            audio.Play();
-            StartCoroutine(Respawn());
 
-        }
-        if (other.tag == "Enemy")
-        {
-            enemyCount++;
-            audio.Play();
-            StartCoroutine(Respawn());
-            
-        }
+    private void Start()
+    {
+        playerCount = PlayerPrefs.GetInt("playerCount");
+        enemyCount = PlayerPrefs.GetInt("enemyCount");
+        UpdateHealth();
+        
     }
 
-    private void Update()
+
+    void UpdateHealth()
     {
+        if (playerCount == 0)
+        {
+            health100.SetActive(true);
+        }
+        
         if (playerCount == 1)
         {
             health100.SetActive(false);
@@ -51,46 +47,87 @@ public class EndTrigger : MonoBehaviour
             health0.SetActive(true);
         }
         
+        if (enemyCount == 0)
+        {
+            eHealth100.SetActive(true);
+        }
         if (enemyCount == 1)
         {
-            Ehealth100.SetActive(false);
-            Ehealth70.SetActive(true);
+            eHealth100.SetActive(false);
+            eHealth70.SetActive(true);
         }
         if (enemyCount == 2)
         {
-            Ehealth70.SetActive(false);
-            Ehealth30.SetActive(true);
+            eHealth70.SetActive(false);
+            eHealth30.SetActive(true);
         }
         if (enemyCount == 3)
         {
-            Ehealth30.SetActive(false);
-            Ehealth0.SetActive(true);
+            eHealth30.SetActive(false);
+            eHealth0.SetActive(true);
         }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log($"Player count : {playerCount}    Enemy count : {enemyCount}");
+        if (other.tag == "PlayerBody")
+        {
+            playerCount++;
+            PlayerPrefs.SetInt("playerCount", playerCount);
+            audio.Play();
+            UpdateHealth();
+           StartCoroutine(RestartLevel());
+
+        }
+        if (other.tag == "EnemyBody")
+        {
+            enemyCount++;
+            PlayerPrefs.SetInt("enemyCount", enemyCount);
+            audio.Play();
+            UpdateHealth();
+            StartCoroutine(RestartLevel());
+            
+        }
+    }
+
+    private void Update()
+    {
         if (playerCount == 3)
         {
-            StartCoroutine(RestartLevel());
+            StartCoroutine(EndLevel());
         }
+        
         if (enemyCount == 3)
         {
-            StartCoroutine(RestartLevel());
+            StartCoroutine(EndLevel());
         }
+       
+
     }
 
 
     private IEnumerator RestartLevel()
     {
-        endText.text = "GAME OVER";
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    private IEnumerator Respawn()
+    private IEnumerator EndLevel()
     {
+        if (playerCount > enemyCount)
+        {
+            endText.text = "GAME OVER";
+        }
+        else endText.text = "VICTORY";
         
         yield return new WaitForSeconds(2f);
-        player.transform.Translate(playerSpawn.transform.position);
-        enemy.transform.Translate(enemySpawn.transform.position);
+        endText.text = "";
+        PlayerPrefs.SetInt("enemyCount", 0);
+        PlayerPrefs.SetInt("playerCount", 0);
 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+    
+    
     
 }

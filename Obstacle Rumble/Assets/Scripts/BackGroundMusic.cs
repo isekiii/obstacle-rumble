@@ -22,15 +22,15 @@ public class BackGroundMusic : MonoBehaviour
         audio.Stop();
         audio.clip = music1;
         audio.Play();
-        yield return new WaitForSeconds(90f); // music1
+        yield return new WaitForSeconds(91f); // music1
         audio.Stop();
         audio.clip = music2;
         audio.Play();
-        yield return new WaitForSeconds(82f); // music2
+        yield return new WaitForSeconds(83f); // music2
         audio.Stop();
         audio.clip = music3;
         audio.Play();
-        yield return new WaitForSeconds(121f); // music3
+        yield return new WaitForSeconds(122f); // music3
         StartCoroutine(PlayMusic());
 
     }
