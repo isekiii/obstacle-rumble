@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         PlayerPrefs.SetInt("enemyCount", 0);
         PlayerPrefs.SetInt("playerCount", 0);
+        PlayerPrefs.SetInt("totalScore", 0);
         click.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
