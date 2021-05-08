@@ -6,7 +6,7 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
 
-    [SerializeField] private AudioSource click, highlight;
+    [SerializeField] private AudioSource click;
     public void StartGame()
     {
         PlayerPrefs.SetInt("enemyCount", 0);
