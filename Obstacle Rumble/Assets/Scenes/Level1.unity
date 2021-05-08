@@ -6752,9 +6752,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808f94aa63f2d4d4480127930ea4a217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music1: {fileID: 8300000, guid: 7eb6c9c7975540544adc85c97fe11d02, type: 3}
-  music2: {fileID: 8300000, guid: 81a145f751589cc4c9be7d92e84b36b2, type: 3}
-  music3: {fileID: 8300000, guid: cd0a869d67b4cbc4cb68d4e491b8e789, type: 3}
+  music1: {fileID: 8300000, guid: dcee9e9579ddf3d4f8c997fc49280f54, type: 3}
+  music2: {fileID: 8300000, guid: ed1c181298070ee428b3d49f85392448, type: 3}
+  music3: {fileID: 8300000, guid: 3c2dbc4f8ad530347b572c881414b8a4, type: 3}
   audio: {fileID: 2053700826}
 --- !u!1 &2075137630
 GameObject:
@@ -12504,10 +12504,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 467586019198122498, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b879309a2fb3a648baf32f6299b1320, type: 3}
+    - target: {fileID: 5025931426426740795, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ba3da2b171599643ac133eafb997db2, type: 3}
+    - target: {fileID: 5225802929601697853, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d3ef3b2cfc3c8ee47ba7875b12a5fb8c, type: 3}
     - target: {fileID: 7061714766185882060, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7200582849259174402, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d1711f106bb76114c88305158095d98b, type: 3}
     - target: {fileID: 7587316906010590070, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -12559,7 +12575,7 @@ PrefabInstance:
     - target: {fileID: 7980706174939432213, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
       propertyPath: punchAudio
       value: 
-      objectReference: {fileID: 7980706176788947427}
+      objectReference: {fileID: 7980706176788947425}
     - target: {fileID: 7980706174939432215, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
       propertyPath: maxSpeed
       value: 20
@@ -12586,10 +12602,5 @@ AudioSource:
 --- !u!82 &7980706176788947426 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5025931426426740795, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
-  m_PrefabInstance: {fileID: 7980706176788947418}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &7980706176788947427 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6712629185503067884, guid: 03014ff5f764027429efd974e80c3bcb, type: 3}
   m_PrefabInstance: {fileID: 7980706176788947418}
   m_PrefabAsset: {fileID: 0}
