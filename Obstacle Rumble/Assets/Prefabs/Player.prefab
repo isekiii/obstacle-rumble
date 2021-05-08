@@ -1065,8 +1065,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7980706174939432209}
-  punchAudio: {fileID: 0}
-  kickAudio: {fileID: 0}
+  punchAudio: {fileID: 5225802929601697853}
+  kickAudio: {fileID: 5025931426426740795}
 --- !u!82 &7200582849259174402
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1077,7 +1077,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dd440d25d3eb5b8409e6fa9eeff177cd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d1711f106bb76114c88305158095d98b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1173,7 +1173,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8b9336fae94ee2e48b73c7cb0f1a6ab3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d3ef3b2cfc3c8ee47ba7875b12a5fb8c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1269,7 +1269,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1760f685876c5ae488a08aa7eff37d65, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0ba3da2b171599643ac133eafb997db2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1365,7 +1365,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5636c4c0443164e4592c18dfe7852abe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6b879309a2fb3a648baf32f6299b1320, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

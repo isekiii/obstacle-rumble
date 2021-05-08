@@ -9,11 +9,13 @@ using UnityEngine.SceneManagement;
 public class EndTrigger : MonoBehaviour
 {
     [SerializeField] private TMP_Text endText;
+    [SerializeField] private AudioSource audio;
     
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Player")) return;
         endText.text = "GAME OVER";
+        audio.Play();
 
         StartCoroutine(RestartLevel());
     }
