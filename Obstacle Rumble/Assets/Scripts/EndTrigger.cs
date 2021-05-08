@@ -151,7 +151,7 @@ public class EndTrigger : MonoBehaviour
         
         PlayerPrefs.SetInt("enemyCount", 0);
         PlayerPrefs.SetInt("playerCount", 0);
-        PlayerPrefs.SetInt("totalScore",PlayerPrefs.GetInt("totalScore")+ score);
+        PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") + score);
         scoreText.text = score.ToString();
         
     }
