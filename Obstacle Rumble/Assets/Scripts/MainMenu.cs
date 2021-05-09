@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour
 {
 
     [SerializeField] private AudioSource click;
+    [SerializeField] private RectTransform optionPanel;
     public void StartGame()
     {
         PlayerPrefs.SetInt("enemyCount", 0);
@@ -17,6 +18,8 @@ public class MainMenu : MonoBehaviour
     public void Options()
     {
         click.Play();
+        optionPanel.localScale = new Vector3(1, 1, 1);
+
     }
 
     public void ExitGame()

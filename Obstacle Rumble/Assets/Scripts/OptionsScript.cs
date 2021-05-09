@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class OptionsScript : MonoBehaviour
 {
     
-    public AudioMixer audioMixer;
+    public AudioMixer musicMixer, sfxMixer;
     
     
     public TMP_Dropdown RezDropdown;
@@ -16,7 +16,7 @@ public class OptionsScript : MonoBehaviour
 
     private Resolution[] resolutions;
 
-    public Slider masterVolume;
+    public Slider musicVolume;
     public Slider soundEffects;
     public Toggle fullscreenBox;
     
@@ -37,6 +37,11 @@ public class OptionsScript : MonoBehaviour
         
     }
 
+    public void Apply()
+    {
+        this.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+    }
+
     public void SetValues()
     {
         if (PlayerPrefs.GetInt("Fullscreen") == 1)
@@ -44,8 +49,8 @@ public class OptionsScript : MonoBehaviour
             SetFullscreen(true);
         }
         else SetFullscreen(false);
-        masterVolume.value = PlayerPrefs.GetFloat("Volume");
-        soundEffects.value = PlayerPrefs.GetFloat("soundEffects");
+        musicVolume.value =  PlayerPrefs.GetFloat("Volume") ;
+        soundEffects.value =  PlayerPrefs.GetFloat("soundEffects")  ;
         quality.value = PlayerPrefs.GetInt("qualityIndex");
         RezDropdown.value = PlayerPrefs.GetInt("resolutionIndex");
     }
@@ -61,14 +66,14 @@ public class OptionsScript : MonoBehaviour
     public void SetVolume(float volume)
     {
         PlayerPrefs.SetFloat("Volume", volume);
-        audioMixer.SetFloat("Volume", volume);
+        musicMixer.SetFloat("Volume",Mathf.Log10(volume) * 20 );
        
     }
 
     public void SetsoundEffects(float volume)
     {
         PlayerPrefs.SetFloat("soundEffects", volume);
-        audioMixer.SetFloat("soundEffects", volume);
+        sfxMixer.SetFloat("Volume", Mathf.Log10(volume) * 20 );
     }
     
 

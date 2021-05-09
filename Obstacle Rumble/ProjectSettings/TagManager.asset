@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - PlayerBody
   - EnemyBody
+  - EnemyLimb
+  - PlayerLimb
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - EndTrigger
+  - Enemy
+  - Player
   - 
   - 
   - 

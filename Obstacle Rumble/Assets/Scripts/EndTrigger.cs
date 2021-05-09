@@ -76,32 +76,29 @@ public class EndTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Player count : {playerCount}    Enemy count : {enemyCount}");
+        
         if (other.tag == "PlayerBody")
         {
             playerCount++;
             PlayerPrefs.SetInt("playerCount", playerCount);
             audio.Play();
             UpdateHealth();
-            if (playerCount != 3)
+            if (playerCount < 3)
             {
                 StartCoroutine(RestartLevel());
             }
-          
-
         }
-        if (other.tag == "EnemyBody")
+        
+        if (other.tag == "Enemy")
         {
             enemyCount++;
             PlayerPrefs.SetInt("enemyCount", enemyCount);
             audio.Play();
             UpdateHealth();
-            if (enemyCount != 3)
+            if (enemyCount < 3)
             {
                 StartCoroutine(RestartLevel());
             }
-           
-            
         }
     }
 
@@ -133,7 +130,6 @@ public class EndTrigger : MonoBehaviour
             result.text = "E N E M Y  W O N";
             enemyImage.SetActive(true);
             playerImage.SetActive(false);
-            
         }
         else
         {

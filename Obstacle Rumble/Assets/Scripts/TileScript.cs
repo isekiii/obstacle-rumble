@@ -14,13 +14,15 @@ public class TileScript : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody>();
         anim["TileWiggle"].speed = AnimSpeed;
-        rb.constraints = RigidbodyConstraints.FreezePosition;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
 
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag != "Player") return;
+        
+        if (other.gameObject.tag != "PlayerBody" || other.gameObject.tag != "Enemy") return;
+        
         anim.Play();
         StartCoroutine(FallDown());
 

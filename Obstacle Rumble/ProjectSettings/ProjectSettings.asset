@@ -535,8 +535,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Obstacle Rumble
-  metroPackageVersion: 
+  metroPackageName: ObstacleRumble
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -544,7 +544,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Obstacle Rumble
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Obstacle Rumble
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
