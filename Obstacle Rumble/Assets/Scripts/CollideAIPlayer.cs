@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class CollideAIPlayer : MonoBehaviour
 {
-    Transform player;
+    PlayerMovementRB player;
     EnemyMovementAI enemy;
 
     private void Start()
     {
-        player = GameObject.FindWithTag("PlayerBody").GetComponent<Transform>();
-        enemy = GameObject.FindWithTag("EnemyBody").GetComponent<EnemyMovementAI>();
+        player = GameObject.FindWithTag("PlayerBody").GetComponent<PlayerMovementRB>();
+        enemy = GameObject.FindWithTag("Enemy").GetComponent<EnemyMovementAI>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -19,11 +19,11 @@ public class CollideAIPlayer : MonoBehaviour
        
         if (other.gameObject.tag == "Player")
         {
-            enemy.GetHit(player.transform.forward);
+            player.GetHit(player.transform.forward);
         }
         if (other.gameObject.tag == "Enemy")
         {
-            enemy.GetHit(player.transform.forward);
+            enemy.GetHit(enemy.transform.forward);
         }
         
     }
