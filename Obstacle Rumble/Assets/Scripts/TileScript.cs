@@ -21,7 +21,7 @@ public class TileScript : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         
-        if (other.gameObject.tag != "PlayerBody" || other.gameObject.tag != "Enemy") return;
+        if (other.gameObject.tag != "PlayerBody" && other.gameObject.tag != "Enemy") return;
         
         anim.Play();
         StartCoroutine(FallDown());

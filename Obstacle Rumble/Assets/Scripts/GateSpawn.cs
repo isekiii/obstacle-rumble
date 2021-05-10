@@ -7,7 +7,7 @@ public class GateSpawn : MonoBehaviour
 
    private void OnTriggerExit(Collider other)
    {
-      if (other.gameObject.tag == "PlayerBody" || other.gameObject.tag == "EnemyBody")
+      if (other.gameObject.tag == "PlayerBody" || other.gameObject.tag == "Enemy")
       {
          Instantiate(gatePref, spawnPoint.position, spawnPoint.rotation);
       }

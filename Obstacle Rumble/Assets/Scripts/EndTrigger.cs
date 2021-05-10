@@ -13,9 +13,11 @@ public class EndTrigger : MonoBehaviour
     private int enemyCount =0;
     [SerializeField] private GameObject playerImage, enemyImage, endPanel;
     [SerializeField] private TMP_Text scoreText, health, result;
+    private bool fell;
 
     private void Start()
     {
+        fell = false;
         playerCount = PlayerPrefs.GetInt("playerCount");
         enemyCount = PlayerPrefs.GetInt("enemyCount");
         UpdateHealth();
@@ -77,8 +79,9 @@ public class EndTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.tag == "PlayerBody")
+        if (other.tag == "PlayerBody" && !fell )
         {
+            fell = true;
             playerCount++;
             PlayerPrefs.SetInt("playerCount", playerCount);
             audio.Play();
@@ -89,8 +92,9 @@ public class EndTrigger : MonoBehaviour
             }
         }
         
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy"&& !fell)
         {
+            fell = true;
             enemyCount++;
             PlayerPrefs.SetInt("enemyCount", enemyCount);
             audio.Play();
