@@ -14,9 +14,11 @@ public class EndTrigger : MonoBehaviour
     [SerializeField] private GameObject playerImage, enemyImage, endPanel;
     [SerializeField] private TMP_Text scoreText, health, result;
     private bool fell;
+    private bool totalSet;
 
     private void Start()
     {
+        totalSet = false;
         fell = false;
         playerCount = PlayerPrefs.GetInt("playerCount");
         enemyCount = PlayerPrefs.GetInt("enemyCount");
@@ -151,7 +153,15 @@ public class EndTrigger : MonoBehaviour
         
         PlayerPrefs.SetInt("enemyCount", 0);
         PlayerPrefs.SetInt("playerCount", 0);
-        PlayerPrefs.SetInt("totalScore", PlayerPrefs.GetInt("totalScore") + score);
+       
+        
+        if (!totalSet)
+        {
+            int total = PlayerPrefs.GetInt("totalScore");
+            PlayerPrefs.SetInt("totalScore",  total + score);
+            totalSet = true;
+        }
+       
         scoreText.text = score.ToString();
         
     }
