@@ -16,7 +16,7 @@ public class PlayerMovementRB : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask;
 
-    [SerializeField] private AudioSource jumpAudio;
+    [SerializeField] private AudioSource jumpAudio, getHitAudio;
 
     private float horizontal, vertical;
     private Rigidbody player;
@@ -177,6 +177,7 @@ public class PlayerMovementRB : MonoBehaviour
 
     public void GetHit(Vector3 dir )
     {
+        getHitAudio.Play();
         player.AddForce(dir * hitForce * Time.deltaTime, ForceMode.VelocityChange);
     }
 }

@@ -9,6 +9,7 @@ public class EnemyMovementAI : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private AudioSource getHitAudio;
     public float hitForce = 300;
 
     private Rigidbody rb;
@@ -68,6 +69,7 @@ public class EnemyMovementAI : MonoBehaviour
         agent.enabled = false;
         rb.isKinematic = false;
         beingHit = true;
+        getHitAudio.Play();
         rb.AddForce(dir * hitForce * Time.deltaTime, ForceMode.VelocityChange);
         yield return new WaitForSeconds(1.5f);
         rb.isKinematic = true;
