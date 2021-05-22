@@ -10,11 +10,19 @@ public class LevelScript : MonoBehaviour
     [SerializeField] private TMP_Text text;
 
     [SerializeField] private GameObject panel;
-    // Start is called before the first frame update
-    void Start()
+
+    
+    void Awake()
     {
-        text.text = "L E V E L   "  + SceneManager.GetActiveScene().buildIndex +  " \n k n o c k   o f f   y o u r    o p p o n e n t";
-        StartCoroutine(time());
+        panel.SetActive(false);
+        if (PlayerPrefs.GetInt("playerCount") == 0 && PlayerPrefs.GetInt("enemyCount") == 0)
+        {
+            panel.SetActive(true);
+            text.text = "L E V E L   "  + SceneManager.GetActiveScene().buildIndex +  " \n k n o c k   o f f   y o u r    o p p o n e n t";
+            StartCoroutine(time());
+        }
+        
+        
     }
 
 

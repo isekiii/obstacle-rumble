@@ -9,8 +9,8 @@ public class EndTrigger : MonoBehaviour
     [SerializeField] private AudioSource audio;
     [SerializeField] private GameObject health0, health30, health70, health100;
     [SerializeField] private GameObject eHealth0, eHealth30, eHealth70, eHealth100;
-    private int playerCount =0;
-    private int enemyCount =0;
+    public int playerCount =0;
+    public int enemyCount =0;
     [SerializeField] private GameObject playerImage, enemyImage, endPanel;
     [SerializeField] private TMP_Text scoreText, health, result;
     private bool fell;
