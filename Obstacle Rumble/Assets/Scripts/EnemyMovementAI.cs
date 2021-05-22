@@ -10,6 +10,7 @@ public class EnemyMovementAI : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private AudioSource getHitAudio;
+    private Animator anim;
     public float hitForce = 300;
 
     private Rigidbody rb;
@@ -22,6 +23,7 @@ public class EnemyMovementAI : MonoBehaviour
     {
         beingHit = false;
         rb = this.GetComponent<Rigidbody>();
+        anim = this.GetComponent<Animator>();
     }
 
 
@@ -39,15 +41,10 @@ public class EnemyMovementAI : MonoBehaviour
            agent.enabled = false;
            rb.MovePosition(transform.position + transform.up * -1 * gravity * Time.deltaTime);
        }
-       else if (!beingHit)
+       else if (!beingHit && anim.GetBool("gotHit"))
        {
            agent.enabled = true;
        }
-
-       
-
-
-
     }
     
     private void OnCollisionEnter(Collision other)
@@ -69,9 +66,11 @@ public class EnemyMovementAI : MonoBehaviour
         agent.enabled = false;
         rb.isKinematic = false;
         beingHit = true;
+        anim.SetBool("gotHit", true);
         getHitAudio.Play();
         rb.AddForce(dir * hitForce * Time.deltaTime, ForceMode.VelocityChange);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(4.6f);
+        anim.SetBool("gotHit", false);
         rb.isKinematic = true;
         agent.enabled = true;
         beingHit = false;
