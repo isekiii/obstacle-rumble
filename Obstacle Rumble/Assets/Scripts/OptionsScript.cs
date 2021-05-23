@@ -93,5 +93,15 @@ public class OptionsScript : MonoBehaviour
         
         Screen.fullScreen = isFullscreen;
     }
+
+    public void Resetgame()
+    {
+        PlayerPrefs.SetString("BestName1","");
+        PlayerPrefs.SetString("BestName2","");
+        PlayerPrefs.SetString("BestName3","");
+        PlayerPrefs.SetInt("BestScore1",-100);
+        PlayerPrefs.SetInt("BestScore2",-102);
+        PlayerPrefs.SetInt("BestScore3",-103);
+    }
     
 }

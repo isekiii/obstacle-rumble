@@ -13212,6 +13212,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   getHitAudio: {fileID: 1847374310}
+  punchAudio: {fileID: 1847374312}
+  kickAudio: {fileID: 1847374311}
   hitForce: 300
   isGrounded: 0
   gravity: 9.8
@@ -13255,6 +13257,16 @@ Transform:
 --- !u!82 &1847374310 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1267602282569751684, guid: d396c0d65f487424c8b3d3b4b57b53f1, type: 3}
+  m_PrefabInstance: {fileID: 1847374302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1847374311 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2426929590506942494, guid: d396c0d65f487424c8b3d3b4b57b53f1, type: 3}
+  m_PrefabInstance: {fileID: 1847374302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1847374312 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5576105843678786376, guid: d396c0d65f487424c8b3d3b4b57b53f1, type: 3}
   m_PrefabInstance: {fileID: 1847374302}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &1857512402

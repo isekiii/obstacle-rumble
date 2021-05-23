@@ -20,14 +20,14 @@ public class AttackEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.tag == "Enemy")
         {
             
             if (anim.GetBool("isPunching2") || anim.GetBool("isPunching1") || anim.GetBool("isKicking"))
             {
                 enemy.GetHit(player.transform.forward);
-            }
-            
+            }  
         }
     }
 }
