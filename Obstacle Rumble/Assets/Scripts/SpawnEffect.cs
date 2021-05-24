@@ -10,7 +10,7 @@ public class SpawnEffect : MonoBehaviour
 
     IEnumerator endEffect()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2.5f);
         gameObject.SetActive(false);
     }
 }
